@@ -4,13 +4,14 @@ import { CardPersonajeComponent } from '../components/cardPersonaje/cardPersonaj
 import { map, switchMap } from 'rxjs';
 import { Personaje } from '../../shared/interface/personaje.interface';
 import { ActivatedRoute } from '@angular/router';
+import { AlertComponent } from '../../shared/components/alertComponent/alertComponent.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   standalone: true,
-  imports:[CardPersonajeComponent]
+  imports:[CardPersonajeComponent, AlertComponent]
 })
 export class HomeComponent implements OnInit {
 

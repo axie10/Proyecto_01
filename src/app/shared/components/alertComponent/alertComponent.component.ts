@@ -16,7 +16,13 @@ export class AlertComponent {
 
   @Input() message: string = '';
   @Input() color: string = '';
-  @Input() fontSize: number = "16";
+  @Input() fontSize: string = "";
+
+  public fotnSize2: number = 0;
+
+  ngOnInit(): void {
+    this.fotnSize2 = parseFloat(this.fontSize);
+  }
 
   constructor(private _snackBar: MatSnackBar) {}
 
