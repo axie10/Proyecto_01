@@ -9,11 +9,12 @@ import { Personaje } from '../../shared/interface/personaje.interface';
 import { EpisodiosListComponent } from '../components/EpisodiosList/EpisodiosList.component';
 import { AllEpisodiosService } from '../../shared/service/Episodios/allEpisodios.service';
 import { Allepisodios,Result  } from '../../shared/interface/allEpisodios.interface';
+import { AlertComponent } from '../../shared/components/alertComponent/alertComponent.component';
 
 @Component({
   selector: 'app-pagina-inicio',
   standalone: true,
-  imports: [CommonModule, MatCardComponentComponent, RouterModule, EpisodiosListComponent],
+  imports: [CommonModule, MatCardComponentComponent, RouterModule, EpisodiosListComponent, AlertComponent],
   templateUrl: './pagina-inicio.component.html',
   styleUrl: './pagina-inicio.component.scss',
   providers: [RouterModule]
