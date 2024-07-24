@@ -1,9 +1,28 @@
 <p>
-    <mat-toolbar>
-        <button mat-icon-button>
-            <mat-icon>home</mat-icon>
-          </button>
-      <span>Ricky & Morty</span>
+    <mat-toolbar style="display: flex;">
+
+      <div style="flex-basis: 5%;">
+        <button (click)="homess()" mat-icon-button>
+          <mat-icon>home</mat-icon>
+        </button>
+      </div>
+
+      <div style="flex-basis: 10%;">
+        <span>Ricky & Morty</span>
+      </div>
+
+      <div style="flex-basis: 12%;">
+        <app-alertComponent (click)="openSancBar()" message="Primer Web Component" color="red" ></app-alertComponent>
+      </div>
+
+      <div style="flex-basis: 10%;">
+        <app-alertComponent (click)="openSancBar2()" message="Primer Web Component" color="green" ></app-alertComponent>
+      </div>
+
+      <div style="flex-basis: 10%;">
+        <button mat-button (click)="openDialog()">Launch dialog</button>
+      </div>
+      
     </mat-toolbar>
   </p>
 
