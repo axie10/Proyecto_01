@@ -1,0 +1,20 @@
+
+
+<div style="display: flex; justify-content: center;">
+
+    <div style="flex-basis: 40%;">
+        <h2>Datos del episodio</h2>
+        <app-tableEpisode [id]="id" [name]="name" [date]="date" [episode]="episode"></app-tableEpisode>
+    </div>
+
+    <div style="flex-basis: 50%; display: flex; flex-flow: row wrap; justify-content: center;">
+        <h2 >Personajes del episodio</h2>
+        
+        <div style="display: flex; flex-flow: row wrap;">
+            @for(item of datosPersonjanes; track $index ){
+                <app-MatCardComponent [name]="item.name" [specie]="item.species" [gender]="item.gender" [image]="item.image" [id]="item.id"></app-MatCardComponent>
+            }
+        </div>
+    </div>
+</div>
+

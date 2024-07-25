@@ -38,18 +38,7 @@ export class MatCardComponentComponent implements OnInit {
 
 
   personajeIndividual(id: number | undefined){
-
-    this.dialog.open(ModalComponentComponent, {
-      data: {
-        titulo: 'Modal1 de prueba',
-        mensaje: 'Aqui es dodne va a air el cuerpo de mensaje',
-        boton : 'Cerrar'
-      }
-    });
-
-    
-    
-    // this.router.navigate(['./personaje/'+id]);
+    this.router.navigate(['./personaje/'+id]);
   }
 
 

@@ -12,8 +12,12 @@ export class PersonajeIndividualRickMortyService {
     private http: HttpClient
   ) { }
 
-  getPersonaje(id: number): Observable<Personaje> {
+  getPersonaje(id: string): Observable<Personaje> {
     return this.http.get<Personaje>(`https://rickandmortyapi.com/api/character/${id}`);
   }
+
+  getPersonajes(url: string): Observable<Personaje> {
+    return this.http.get<Personaje>(url);
+  } 
 
 }
