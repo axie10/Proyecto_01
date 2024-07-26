@@ -1,6 +1,11 @@
-<mat-list>
-  <a href="{{url}}" style="text-decoration: none;">
-    <mat-list-item><strong>Name:</strong> {{name}} | <strong>Date:</strong> {{date}}</mat-list-item>
+<mat-list (click)="episodioSingle(id)">
+  <a class="lineaEpisodio">
+    <mat-list-item class="texto">
+      <p class="texto">
+        <strong>Name:</strong> {{name}} | 
+        <strong>Date:</strong> {{date}}
+      </p>
+    </mat-list-item>
   </a>
   <mat-divider></mat-divider>
 </mat-list>

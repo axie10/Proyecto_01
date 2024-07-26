@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { AlertComponentComponent } from './alertComponent.component';
+import { TreeSingleLocationComponent } from './treeSingleLocation.component';
 
-describe('AlertComponentComponent', () => {
-  let component: AlertComponentComponent;
-  let fixture: ComponentFixture<AlertComponentComponent>;
+describe('TreeSingleLocationComponent', () => {
+  let component: TreeSingleLocationComponent;
+  let fixture: ComponentFixture<TreeSingleLocationComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AlertComponentComponent ]
+      declarations: [ TreeSingleLocationComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AlertComponentComponent);
+    fixture = TestBed.createComponent(TreeSingleLocationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -2,21 +2,22 @@
 
 <div style="display: flex;">
 
-    <div style="flex-basis: 60%;">
-        <h1 style="margin-bottom: 2%; margin-left: 5%;">Personajes</h1>
-        <div style="display: flex; flex-flow: row wrap; justify-content: center; margin: 0%; padding: 0%;">
-
+    <div style="flex-basis: 60%; background-color: #272B33; padding: 3%;">
+        <p style="color: white; font-size: x-large; font-family: 'Courier New', Courier, monospace;">Personajes</p>
+        <div style="display: flex; flex-flow: row wrap; justify-content: center; margin-top: 3%; padding: 0%;">
             @for(item of personaje; track $index ){
-                <app-MatCardComponent [name]="item.name" [specie]="item.species" [gender]="item.gender" [image]="item.image" [id]="item.id"></app-MatCardComponent>
+                <app-MatCardComponent [widthVariable]="widthVariable" [heightVariable]="heightVariable" [class]="'cardpequeña'" [name]="item.name" [specie]="item.species" [gender]="item.gender" [image]="item.image" [id]="item.id"></app-MatCardComponent>
             }
         </div>
     </div>
 
-    <div style="flex-basis: 40%;">
-        <h1>Episodios</h1>
-        @for(item2 of episodios; track $index ){
-            <app-EpisodiosList [name]="item2.name" [date]="item2.air_date" [url]="item2.url"></app-EpisodiosList>
-        }
+    <div style="flex-basis: 40%;background-color: #272B33; padding: 3%;" >
+        <p style="color: white; font-size: x-large; font-family: 'Courier New', Courier, monospace;">Episodios</p>
+        <div style=" margin-top: 3%; padding: 0%;">
+            @for(item2 of episodios; track $index ){
+                <app-EpisodiosList [id]="item2.id" [name]="item2.name" [date]="item2.air_date" [url]="item2.url"></app-EpisodiosList>
+            }
+        </div>
     </div>
 
 </div>

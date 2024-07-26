@@ -1,20 +1,20 @@
 
 
-<div style="display: flex; justify-content: center;">
+<div style="display: flex; justify-content: center; background-color: #272B33;">
 
-    <div style="flex-basis: 40%;">
-        <h2>Datos del episodio</h2>
+    <div style="flex-basis: 40%; margin-top: 3%;">
+        <p style="color: white; font-size: x-large; font-family: 'Courier New', Courier, monospace;">Datos Episodio</p>
         <app-tableEpisode [id]="id" [name]="name" [date]="date" [episode]="episode"></app-tableEpisode>
     </div>
 
-    <div style="flex-basis: 50%; display: flex; flex-flow: row wrap; justify-content: center;">
-        <h2 >Personajes del episodio</h2>
-        
-        <div style="display: flex; flex-flow: row wrap;">
+    <div style="flex-basis: 50%; display: flex; flex-flow: row wrap;margin-top: 3%;">
+        <p style="color: white; font-size: x-large; font-family: 'Courier New', Courier, monospace; margin-left: 5%;">Personajes Episodio</p>
+        <div style="display: flex; flex-flow: row wrap; justify-content: center;">
             @for(item of datosPersonjanes; track $index ){
-                <app-MatCardComponent [name]="item.name" [specie]="item.species" [gender]="item.gender" [image]="item.image" [id]="item.id"></app-MatCardComponent>
+                <app-MatCardComponent [widthVariable]="widthVariable" [heightVariable]="heightVariable" [class]="'cardpequeña'" [name]="item.name" [specie]="item.species" [gender]="item.gender" [image]="item.image" [id]="item.id"></app-MatCardComponent>
             }
         </div>
     </div>
+    
 </div>
 

@@ -1,13 +1,15 @@
 .mat-dialog{
-    background-color: rgba(45, 247, 0, 0.24);
+    background-color: rgba(72, 0, 255, 0.422);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     width: 400px;
 }
 
 .boton-buscar{
-    background-color: rgba(45, 247, 0, 0.24);
-    :hover{
-        background-color: rgba(45, 247, 0, 0.751);
-    }
+    background-color: rgba(72, 0, 255, 0.222);
+    width: 100%;
+}
+
+.boton-buscar:hover{
+    background-color: rgba(72, 0, 255, 0.422);
     width: 100%;
 }

@@ -1,0 +1,26 @@
+
+
+<div style="display: flex; padding: 2%; background-color: #272B33;">
+
+  <div style="flex-basis: 20%;">
+    <p style="color: rgb(255, 255, 255); font-size: x-large; font-family: 'Courier New', Courier, monospace;">Planeta</p>
+    @if(location){
+      <app-treeSingleLocation [nombre]="location.name" [type]="location.type" [dimension]="location.dimension" [created]="date" [id]="id"></app-treeSingleLocation>
+    }
+  </div>
+
+
+  <div style="flex-basis: 70%;">
+
+    <p style="color: rgb(255, 255, 255); font-size: x-large; font-family: 'Courier New', Courier, monospace; margin-left: 4%;">Personajes</p>
+
+    <div style="display: flex; flex-flow: row wrap; justify-content: center; margin-top: 3%; padding: 0%;align-items: center;">
+      @for(item of personajes; track $index ){
+      <app-MatCardComponent [widthVariable]="widthVariable" [heightVariable]="heightVariable" [class]="'cardpequeña'"
+        [name]="item.name" [specie]="item.species" [gender]="item.gender" [image]="item.image"
+        [id]="item.id"></app-MatCardComponent>
+      }
+    </div>
+  </div>
+
+</div>

@@ -3,9 +3,9 @@ import { TableEpisodeComponent } from '../components/tableEpisode/tableEpisode.c
 import { ActivatedRoute } from '@angular/router';
 import { FilterbyEpisodeService } from '../../shared/service/Episodios/filterbyEpisode.service';
 import { forkJoin, map, switchMap, takeWhile, tap } from 'rxjs';
-import { MatCardComponentComponent } from '../../paginaInicio/components/MatCardComponent/MatCardComponent.component';
 import { PersonajeIndividualRickMortyService } from '../../shared/service/servicioPersonajes/personajeIndividualRickMorty.service';
 import { Personaje } from '../../shared/interface/personaje.interface';
+import { MatCardComponentComponent } from '../../shared/components/card-pequeña-personaje/MatCardComponent.component';
 
 @Component({
   selector: 'app-pagina-inicio-episodio',
@@ -29,6 +29,8 @@ export class PaginaInicioEpisodioComponent implements OnInit {
   personajes: string[] = [];
   //ESTA VARIABLE ES PARA GUARDAR LOS DATOS DE LOS PERSONAJES QUE OBTENEMOS DEL EPISODIO
   datosPersonjanes: Personaje [] = [];
+  public widthVariable: string = "250px";
+  public heightVariable: string = "240px";
 
   constructor() { }
 

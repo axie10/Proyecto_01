@@ -20,3 +20,23 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     padding: 5px;
     border-radius: 0.8rem;
 }
+
+.cardpequeña {
+    width: 250px;
+    height: 385px;
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    margin: 30px;
+}
+
+
+.cardgrande {
+    width: 420px;
+    height: auto;
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    margin: 10px;
+    border: 1px solid #000000;
+}

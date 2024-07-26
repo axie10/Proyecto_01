@@ -1,5 +1,9 @@
-@if(personaje){
-    <app-cardPersonaje [name]="personaje.name" [specie]="personaje.species" [gender]="personaje.gender" [image]="personaje.image"></app-cardPersonaje>
-}
 
-<app-alertComponent message="inicio de sesion correcto" color="blue" ></app-alertComponent>
+<div style="display: flex; justify-content: center; padding-top: 2%; background-color: #272B33; height: 100%;">
+    @if(personaje){
+        <app-MatCardComponent [widthVariable]="widthVariable" [heightVariable]="heightVariable" [class]="'cardgrande'" [name]="personaje.name" [specie]="personaje.species" [gender]="personaje.gender" [image]="personaje.image" [id]="personaje.id"></app-MatCardComponent>
+    }
+</div>
+
+
+

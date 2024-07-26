@@ -1,6 +1,5 @@
 
 import { Component, OnInit,inject } from '@angular/core';
-import { MatCardComponentComponent } from '../components/MatCardComponent/MatCardComponent.component';
 import { PersonajesRickyMortyService } from '../../shared/service/servicioPersonajes/personajesRickyMorty.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -9,12 +8,12 @@ import { Personaje } from '../../shared/interface/personaje.interface';
 import { EpisodiosListComponent } from '../components/EpisodiosList/EpisodiosList.component';
 import { AllEpisodiosService } from '../../shared/service/Episodios/allEpisodios.service';
 import { Allepisodios,Result  } from '../../shared/interface/allEpisodios.interface';
-import { AlertComponent } from '../../shared/components/alertComponent/alertComponent.component';
+import { MatCardComponentComponent } from '../../shared/components/card-pequeña-personaje/MatCardComponent.component';
 
 @Component({
   selector: 'app-pagina-inicio',
   standalone: true,
-  imports: [CommonModule, MatCardComponentComponent, RouterModule, EpisodiosListComponent, AlertComponent],
+  imports: [CommonModule, MatCardComponentComponent, RouterModule, EpisodiosListComponent],
   templateUrl: './pagina-inicio.component.html',
   styleUrl: './pagina-inicio.component.scss',
   providers: [RouterModule]
@@ -26,6 +25,8 @@ export class PaginaInicioComponent implements OnInit {
 
   public episodios?: Result [];
   public personaje?: Personaje [];
+  public widthVariable: string = "250px";
+  public heightVariable: string = "230px";
 
   constructor(
   ) { }

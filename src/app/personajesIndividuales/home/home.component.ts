@@ -1,19 +1,21 @@
 import { PersonajeIndividualRickMortyService } from './../../shared/service/servicioPersonajes/personajeIndividualRickMorty.service';
 import { Component, inject, OnInit } from '@angular/core';
-import { CardPersonajeComponent } from '../components/cardPersonaje/cardPersonaje.component';
 import { map, switchMap } from 'rxjs';
 import { Personaje } from '../../shared/interface/personaje.interface';
 import { ActivatedRoute } from '@angular/router';
-import { AlertComponent } from '../../shared/components/alertComponent/alertComponent.component';
+import { MatCardComponentComponent } from '../../shared/components/card-pequeña-personaje/MatCardComponent.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   standalone: true,
-  imports:[CardPersonajeComponent, AlertComponent]
+  imports:[MatCardComponentComponent]
 })
 export class HomeComponent implements OnInit {
+
+  public widthVariable: string = "420px";
+  public heightVariable: string = "450px";
 
   private serviciopersonajes = inject(PersonajeIndividualRickMortyService);
 

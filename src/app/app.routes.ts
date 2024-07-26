@@ -12,5 +12,9 @@ export const routes: Routes = [
     {
         path:'episodios/:id',
         loadComponent: () => import('./paginaEpisodio/pagina-inicio-episodio/pagina-inicio-episodio.component').then(m => m.PaginaInicioEpisodioComponent)
+    },
+    {
+        path:'location/:id',
+        loadComponent: () => import('./paginaLocation/pagina-inicio-location/pagina-inicio-location.component').then(m => m.PaginaInicioLocationComponent)
     }
 ];
