@@ -7,7 +7,7 @@
     </div>
 
     <div style="flex-basis: 10%;">
-      <span>Rick & Morty</span>
+      <span style="color: rgb(0, 0, 0); font-size: x-large; font-family: 'Courier New', Courier, monospace; font-weight: 800;">Rick & Morty</span>
     </div>
 
     <div style="flex-basis: 10%; display: flex; justify-content: center;">
@@ -27,7 +27,8 @@
         @for(item of locations; track $index ){
           <button
           style="background-color: rgba(115, 0, 255, 0.122); margin-top: 5px; margin-bottom: 5px;"
-          mat-menu-item (click)="BuscarPorPlaneta(item.id)">{{item.name}}</button>
+          mat-menu-item (click)="BuscarPorPlaneta(item.id)">
+          <span style="font-family: 'Courier New', Courier, monospace;">{{item.name}}</span></button>
         }
       </mat-menu>
     </div>
@@ -39,7 +40,8 @@
       </button>
       <mat-menu #menu1="matMenu" >
         @for(item of nameEspecies; track $index){
-          <button style="background-color: rgba(115, 0, 255, 0.122); margin-top: 5px; margin-bottom: 5px;" mat-menu-item (click)="BuscarPorEspecie(item)">{{item}}</button>
+          <button style="background-color: rgba(115, 0, 255, 0.122); margin-top: 5px; margin-bottom: 5px;" mat-menu-item (click)="BuscarPorEspecie(item)"><span style="font-family: 'Courier New', Courier, monospace;">{{item}}</span>
+          </button>
         }
       </mat-menu>
     </div>

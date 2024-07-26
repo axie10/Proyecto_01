@@ -1,7 +1,7 @@
 <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" style="background-color: rgba(71, 178, 71, 0.767); border: 1px solid black; border-radius: 0.8rem; box-shadow: 3px 3px 10px 10px rgba(2, 0, 4, 0.21);">
   <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
     <button mat-icon-button disabled></button>
-    {{node.name}}
+    <span style="font-family: 'Courier New', Courier, monospace; font-size: large;">{{node.name}}</span>
   </mat-tree-node>
   <!-- This is the tree node template for expandable nodes -->
   <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
@@ -11,6 +11,6 @@
         {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
       </mat-icon>
     </button>
-    <strong>{{node.name}}</strong>
+    <span style="font-family: 'Courier New', Courier, monospace; font-weight: 900; font-size: large;">{{node.name}}</span>
   </mat-tree-node>
 </mat-tree>
