@@ -1,0 +1,21 @@
+.mat-card-grande{
+    margin: 10%; 
+    width: 250px; 
+    height: 300px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    background-color: rgba(0, 128, 0, 0.227);
+    margin: 2%;
+}
+
+.boton-mas-info{
+    background-color: rgba(72, 0, 255, 0.422);
+    width: 159px;
+    transition: all 300ms;
+}
+
+.boton-mas-info:hover{
+    background-color: rgba(72, 0, 255, 0.567);
+    transform: scale(1.2);
+}

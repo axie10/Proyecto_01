@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { PaginaInicioComponent } from './paginaInicio/pagina-inicio/pagina-inicio.component';
 
 export const routes: Routes = [
     {
@@ -9,5 +8,13 @@ export const routes: Routes = [
     {
         path:'personaje/:id',
         loadComponent: () => import('./personajesIndividuales/home/home.component').then(m => m.HomeComponent)
+    },
+    {
+        path:'episodios/:id',
+        loadComponent: () => import('./paginaEpisodio/pagina-inicio-episodio/pagina-inicio-episodio.component').then(m => m.PaginaInicioEpisodioComponent)
+    },
+    {
+        path:'location/:id',
+        loadComponent: () => import('./paginaLocation/pagina-inicio-location/pagina-inicio-location.component').then(m => m.PaginaInicioLocationComponent)
     }
 ];

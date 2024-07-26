@@ -2,3 +2,41 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.custom-snackbar-rojo {
+    background-color: #ff4040;
+    color: white;         
+    font-size: 16px;      
+    text-align: center;   
+    padding: 5px;
+    border-radius: 0.8rem;
+}
+
+.custom-snackbar-verde {
+    background-color: #04ee18;
+    color: rgb(23, 244, 3);           
+    font-size: 16px;       
+    text-align: center;    
+    padding: 5px;
+    border-radius: 0.8rem;
+}
+
+.cardpequeña {
+    width: 250px;
+    height: 385px;
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    margin: 30px;
+}
+
+
+.cardgrande {
+    width: 420px;
+    height: auto;
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    margin: 10px;
+    border: 1px solid #000000;
+}
