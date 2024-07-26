@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
     {
         path:'',
-        loadComponent: () => import('./paginaInicio/pagina-inicio/pagina-inicio.component').then(m => m.PaginaInicioComponent)
+        loadComponent: () => import('./paginaInicio/home/pagina-inicio.component').then(m => m.PaginaInicioComponent)
     },
     {
         path:'personaje/:id',
@@ -11,10 +11,14 @@ export const routes: Routes = [
     },
     {
         path:'episodios/:id',
-        loadComponent: () => import('./paginaEpisodio/pagina-inicio-episodio/pagina-inicio-episodio.component').then(m => m.PaginaInicioEpisodioComponent)
+        loadComponent: () => import('./paginaEpisodio/home/pagina-inicio-episodio.component').then(m => m.PaginaInicioEpisodioComponent)
     },
     {
         path:'location/:id',
-        loadComponent: () => import('./paginaLocation/pagina-inicio-location/pagina-inicio-location.component').then(m => m.PaginaInicioLocationComponent)
+        loadComponent: () => import('./paginaLocation/home/pagina-inicio-location.component').then(m => m.PaginaInicioLocationComponent)
+    },
+    {
+        path:'especie/:id',
+        loadComponent: () => import('./paginaEspecie/home/home.component').then(m => m.HomeComponent)
     }
 ];

@@ -6,9 +6,9 @@ import { RouterModule } from '@angular/router';
 import { Personajes} from '../../shared/interface/personajes.interface';
 import { Personaje } from '../../shared/interface/personaje.interface';
 import { EpisodiosListComponent } from '../components/EpisodiosList/EpisodiosList.component';
-import { AllEpisodiosService } from '../../shared/service/Episodios/allEpisodios.service';
 import { Allepisodios,Result  } from '../../shared/interface/allEpisodios.interface';
 import { MatCardComponentComponent } from '../../shared/components/card-pequeña-personaje/MatCardComponent.component';
+import { AllEpisodiosService } from '../../shared/service/serviceEpisodios/allEpisodios.service';
 
 @Component({
   selector: 'app-pagina-inicio',

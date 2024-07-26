@@ -16,8 +16,6 @@ import { CommonModule } from '@angular/common';
 })
 export class MatCardComponentComponent implements OnInit {
 
-  private dialog = inject(MatDialog);
-
   @Input()
   name : string = "";
   @Input()
@@ -40,8 +38,6 @@ export class MatCardComponentComponent implements OnInit {
   heightVariable: string = "";
 
   pepe = "0.3rem"
-
-  
 
   constructor(
     private router: Router

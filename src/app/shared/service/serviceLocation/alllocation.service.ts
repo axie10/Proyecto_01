@@ -19,5 +19,5 @@ export class AlllocationService {
   getSingleLocation(id: number): Observable<Result> {
     return this.http.get<Result>(`https://rickandmortyapi.com/api/location/${id}`);
   }
-
+  
 }

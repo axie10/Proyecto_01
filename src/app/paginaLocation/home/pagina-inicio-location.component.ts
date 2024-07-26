@@ -1,13 +1,13 @@
 import { Component, inject, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { map, switchMap } from 'rxjs';
-import { AlllocationService } from '../../shared/service/Location/alllocation.service';
 import { Result } from '../../shared/interface/allLocation.interface';
 import { JsonPipe } from '@angular/common';
 import { TreeSingleLocationComponent } from '../components/treeSingleLocation/treeSingleLocation.component';
 import { MatCardComponentComponent } from '../../shared/components/card-pequeña-personaje/MatCardComponent.component';
 import { PersonajeIndividualRickMortyService } from '../../shared/service/servicioPersonajes/personajeIndividualRickMorty.service';
 import { Personaje } from '../../shared/interface/personaje.interface';
+import { AlllocationService } from '../../shared/service/serviceLocation/alllocation.service';
 
 
 @Component({
@@ -55,6 +55,7 @@ export class PaginaInicioLocationComponent implements OnInit {
       });
     });
 
+    //para cuando busquemos otro planeta cuando estamos en esta vista ponemos un evento a la utl, de tal manera que cuando cambie se ejecuta esta funcion
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.route.params.pipe(

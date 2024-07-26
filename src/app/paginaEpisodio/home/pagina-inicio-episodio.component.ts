@@ -1,11 +1,11 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { TableEpisodeComponent } from '../components/tableEpisode/tableEpisode.component';
 import { ActivatedRoute } from '@angular/router';
-import { FilterbyEpisodeService } from '../../shared/service/Episodios/filterbyEpisode.service';
 import { forkJoin, map, switchMap, takeWhile, tap } from 'rxjs';
 import { PersonajeIndividualRickMortyService } from '../../shared/service/servicioPersonajes/personajeIndividualRickMorty.service';
 import { Personaje } from '../../shared/interface/personaje.interface';
 import { MatCardComponentComponent } from '../../shared/components/card-pequeña-personaje/MatCardComponent.component';
+import { FilterbyEpisodeService } from '../../shared/service/serviceEpisodios/filterbyEpisode.service';
 
 @Component({
   selector: 'app-pagina-inicio-episodio',
