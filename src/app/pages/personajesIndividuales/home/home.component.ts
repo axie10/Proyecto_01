@@ -1,9 +1,9 @@
-import { PersonajeIndividualRickMortyService } from './../../shared/service/servicioPersonajes/personajeIndividualRickMorty.service';
 import { Component, inject, OnInit } from '@angular/core';
 import { map, switchMap } from 'rxjs';
-import { Personaje } from '../../shared/interface/personaje.interface';
 import { ActivatedRoute } from '@angular/router';
-import { MatCardComponentComponent } from '../../shared/components/card-pequeña-personaje/MatCardComponent.component';
+import { MatCardComponentComponent } from '../../../shared/components/card-pequeña-personaje/MatCardComponent.component';
+import { Personaje } from '../../../shared/interface/personaje.interface';
+import { PersonajeIndividualRickMortyService } from '../../../shared/service/servicioPersonajes/personajeIndividualRickMorty.service';
 
 @Component({
   selector: 'app-home',

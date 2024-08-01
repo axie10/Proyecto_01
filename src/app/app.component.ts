@@ -1,7 +1,7 @@
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
+import { Router, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -19,7 +19,7 @@ import { AlllocationService } from './shared/service/serviceLocation/alllocation
   imports: [RouterOutlet, MatToolbarModule, MatButtonModule,MatIconModule, MatMenuModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  providers: [HttpClientModule]
+  providers: [HttpClientModule, RouterModule]
 })
 export class AppComponent implements OnInit{
 
@@ -56,6 +56,10 @@ export class AppComponent implements OnInit{
 
   BuscarPorEspecie(id:string){
     this.router.navigate(['./especie', id]);
+  }
+
+  formulario(){
+    this.router.navigate(['./formulario']);
   }
 
 }

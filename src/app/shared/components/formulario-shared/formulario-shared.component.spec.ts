@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { DesplegableNavBarComponent } from './desplegable-nav-bar.component';
+import { FormularioSharedComponent } from './formulario-shared.component';
 
-describe('DesplegableNavBarComponent', () => {
-  let component: DesplegableNavBarComponent;
-  let fixture: ComponentFixture<DesplegableNavBarComponent>;
+describe('FormularioSharedComponent', () => {
+  let component: FormularioSharedComponent;
+  let fixture: ComponentFixture<FormularioSharedComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DesplegableNavBarComponent ]
+      declarations: [ FormularioSharedComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DesplegableNavBarComponent);
+    fixture = TestBed.createComponent(FormularioSharedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

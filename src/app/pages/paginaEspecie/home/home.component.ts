@@ -1,9 +1,9 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ServicioFilterNameService } from '../../shared/service/serviceFilter/servicio-filter-name.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { map, switchMap } from 'rxjs';
-import { Result } from '../../shared/interface/filterByName.interface';
-import { MatCardComponentComponent } from '../../shared/components/card-pequeña-personaje/MatCardComponent.component';
+import { Result } from '../../../shared/interface/filterByName.interface';
+import { MatCardComponentComponent } from '../../../shared/components/card-pequeña-personaje/MatCardComponent.component';
+import { ServicioFilterNameService } from '../../../shared/service/serviceFilter/servicio-filter-name.service';
 
 @Component({
   selector: 'app-home',

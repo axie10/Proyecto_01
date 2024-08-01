@@ -1,13 +1,13 @@
 import { Component, inject, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { map, switchMap } from 'rxjs';
-import { Result } from '../../shared/interface/allLocation.interface';
 import { JsonPipe } from '@angular/common';
 import { TreeSingleLocationComponent } from '../components/treeSingleLocation/treeSingleLocation.component';
-import { MatCardComponentComponent } from '../../shared/components/card-pequeña-personaje/MatCardComponent.component';
-import { PersonajeIndividualRickMortyService } from '../../shared/service/servicioPersonajes/personajeIndividualRickMorty.service';
-import { Personaje } from '../../shared/interface/personaje.interface';
-import { AlllocationService } from '../../shared/service/serviceLocation/alllocation.service';
+import { MatCardComponentComponent } from '../../../shared/components/card-pequeña-personaje/MatCardComponent.component';
+import { Personaje } from '../../../shared/interface/personaje.interface';
+import { AlllocationService } from '../../../shared/service/serviceLocation/alllocation.service';
+import { PersonajeIndividualRickMortyService } from '../../../shared/service/servicioPersonajes/personajeIndividualRickMorty.service';
+import { Result } from '../../../shared/interface/allLocation.interface';
 
 
 @Component({
