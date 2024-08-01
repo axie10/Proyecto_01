@@ -1,3 +1,52 @@
-<p>
-  formulario-shared works!
-</p>
+
+<form [formGroup]="FormularioShared" (ngSubmit)="enviar()">
+
+  <div style="margin-bottom: 2%;">
+    <mat-form-field appearance="outline">
+      <mat-label>Name:</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+  </div>
+
+  <div style="margin-bottom: 2%;">
+      <mat-form-field appearance="outline">
+        <mat-label>Email:</mat-label>
+        <input matInput formControlName="email">
+      </mat-form-field>
+      @if(email.errors?.['required'] && email.touched){
+        <p style="color: red; font-size: small;">Campo requerido</p>
+      }
+      @if(email.errors?.['email'] && email.touched){
+        <p style="color: red; font-size: small;">Debe ser un email</p>
+      }
+  </div>
+
+  <div style="margin-bottom: 2%; display: flex; flex-direction: column;" [formGroup]="personajes">
+
+    <div style="margin-bottom: 5%;">
+      <select formControlName="type" class="form-item">
+        @for(personaje of type; track $index){
+          <option value="{{personaje}}">{{personaje}}</option>
+        }
+      </select>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Personaje</mat-label>
+        <input matInput placeholder="Placeholder" formControlName="nombre">
+        @if(personajes.invalid && personajes.touched){
+          <mat-icon matSuffix style="color: red;">sentiment_very_dissatisfied</mat-icon>
+        }
+      </mat-form-field>
+    </div>
+
+  </div>
+
+  <button type="submit" [disabled]="FormularioShared.invalid">Enviar</button>
+
+</form>
+
+
+<pre>{{FormularioShared.value| json}}</pre>
+<p>{{FormularioShared.invalid}}</p>
+<p>{{FormularioShared.valid}}</p>
