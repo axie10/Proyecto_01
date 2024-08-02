@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -15,33 +15,61 @@ import { MatInputModule } from '@angular/material/input';
 })
 export class FormularioSharedComponent implements OnInit {
 
+  FormularioShared : FormGroup;
+
   public fb = inject(FormBuilder);
 
-  public type = ['human', 'Alien', 'Humanoid', 'Cronenberg', 'unknown'];
+  public typePhones = ['Casa', 'Movil', 'Trabajo'];
 
-  public FormularioShared : FormGroup = this.fb.group({
-    name: ['', Validators.required],
-    email: ['',[Validators.required, Validators.email]],
-    personajes: this.fb.group({
-      type: [''],
-      nombre: [''],
-    }),
-  })
+  // public FormularioShared : FormGroup = this.fb.group({
+  //   name: ['', Validators.required],
+  //   email: ['',[Validators.required, Validators.email]],
+  //   telefonos: this.fb.array([
+  //     this.fb.group({
+  //       type: [''],
+  //       numero: [''],
+  //     })
+  //   ]),
+  //   direccion: ['', Validators.required],
+  // })
 
-  constructor() { }
+  constructor() {
+    this.FormularioShared = this.fb.group({
+      name: ['', Validators.required],
+      email: ['',[Validators.required, Validators.email]],
+      telefonos: this.fb.array([
+        this.fb.group({
+          type: [''],
+          numero: [''],
+        })
+      ]),
+      direccion: ['', Validators.required],
+    })
+  }
 
   ngOnInit() {
   }
 
   enviar(){
-  }
-
-  get personajes(){
-    return this.FormularioShared.get('personajes') as FormGroup;
+    console.log(this.FormularioShared.value);
   }
 
   get email(){
-    return this.FormularioShared.get('email') as FormGroup;
+    return this.FormularioShared.get('email') as FormControl;
+  }
+  get direccion(){
+    return this.FormularioShared.get('direccion') as FormControl;
+  }
+
+  get telefonos(){
+    return this.FormularioShared.get('telefonos') as FormArray;
+  }
+
+  masTelefonos(){
+    this.telefonos.push(this.fb.group({
+      type: [''],
+      numero: [''],
+    }))
   }
 
 }
