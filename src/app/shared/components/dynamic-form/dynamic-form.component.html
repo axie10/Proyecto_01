@@ -1,0 +1,17 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" style="height: auto;">
+  <div *ngFor="let control of form.controls | keyvalue">
+    <mat-form-field appearance="fill">
+      <mat-label>{{ control.key }}</mat-label>
+      <input matInput [formControlName]="control.key">
+      <mat-error *ngIf="form.get(control.key)?.invalid">
+        Campo requerido
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Enviar</button>
+</form>
+
+<pre>
+  {{ form.invalid | json }}
+  {{ form.valid | json }}
+</pre>

@@ -14,9 +14,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
-import { FilterbyEpisodeService } from '../../service/Episodios/filterbyEpisode.service.js';
 import { Route, Router } from '@angular/router';
-import { SnackBarComponetsService } from '../../service/webcomponets/snackBarComponets.service.js';
+import { SnackBarComponetsService } from '../../service/serviceWebcomponets/snackBarComponets.service.js';
 
 @Component({
   selector: 'app-ModalComponent',

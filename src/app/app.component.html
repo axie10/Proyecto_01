@@ -7,20 +7,49 @@
     </div>
 
     <div style="flex-basis: 10%;">
-      <span>Rick & Morty</span>
+      <span style="color: rgb(0, 0, 0); font-size: x-large; font-family: 'Courier New', Courier, monospace; font-weight: 800;">Rick & Morty</span>
     </div>
 
     <div style="flex-basis: 10%; display: flex; justify-content: center;">
-      <button mat-button (click)="openDialog()">Episodio</button>
+      <button style="color: rgb(0, 0, 0); font-size: x-large; font-family: 'Courier New', Courier, monospace; font-weight: 800;" mat-button (click)="openDialog()">
+        <mat-icon class="mat-18">search</mat-icon>
+
+        Episodio
+      </button>
     </div>
 
     <div style="flex-basis: 10%; display: flex; justify-content: center;">
-      <button mat-button [matMenuTriggerFor]="menu">Planeta</button>
-      <mat-menu #menu="matMenu" style="height: 500px;">
+      <button mat-button [matMenuTriggerFor]="menu" style="color: rgb(0, 0, 0); font-size: x-large; font-family: 'Courier New', Courier, monospace;font-weight: 800;">
+        <mat-icon class="mat-18">keyboard_double_arrow_down</mat-icon>
+        Planeta
+      </button>
+      <mat-menu #menu="matMenu">
         @for(item of locations; track $index ){
-          <button mat-menu-item (click)="BuscarPorPlaneta(item.id)">{{item.name}}</button>
+          <button
+          style="background-color: rgba(115, 0, 255, 0.122); margin-top: 5px; margin-bottom: 5px;"
+          mat-menu-item (click)="BuscarPorPlaneta(item.id)">
+          <span style="font-family: 'Courier New', Courier, monospace;">{{item.name}}</span></button>
         }
       </mat-menu>
+    </div>
+
+    <div style="flex-basis: 10%; display: flex; justify-content: center;">
+      <button mat-button [matMenuTriggerFor]="menu1" style="color: rgb(0, 0, 0); font-size: x-large; font-family: 'Courier New', Courier, monospace; font-weight: 800;">
+        <mat-icon class="mat-18">keyboard_double_arrow_down</mat-icon>
+        Especie
+      </button>
+      <mat-menu #menu1="matMenu" >
+        @for(item of nameEspecies; track $index){
+          <button style="background-color: rgba(115, 0, 255, 0.122); margin-top: 5px; margin-bottom: 5px;" mat-menu-item (click)="BuscarPorEspecie(item)"><span style="font-family: 'Courier New', Courier, monospace;">{{item}}</span>
+          </button>
+        }
+      </mat-menu>
+    </div>
+
+    <div style="flex-basis: 10%; display: flex; justify-content: center;">
+      <button (click)="formulario()" style="color: rgb(0, 0, 0); font-size: x-large; font-family: 'Courier New', Courier, monospace; font-weight: 800;" mat-button>
+        Formulario
+      </button>
     </div>
 
   </mat-toolbar>

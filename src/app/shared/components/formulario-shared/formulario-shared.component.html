@@ -1,0 +1,77 @@
+
+
+<div style="display: flex; margin: 10%;">
+
+  <div style="flex-basis: 50%; margin-right: 10%;">
+    <form [formGroup]="FormularioShared" (ngSubmit)="enviar()">
+      <div style="margin-bottom: 2%;">
+
+        <mat-form-field appearance="outline">
+          <mat-label>Name:</mat-label>
+          <input matInput formControlName="name">
+        </mat-form-field>
+        @if(FormularioShared.get('name')?.errors?.['required'] && FormularioShared.get('name')?.touched){
+          <p style="color: red; font-size: small;">Campo requerido</p>
+          }
+      </div>
+
+      <div style="margin-bottom: 2%;">
+      
+        <mat-form-field appearance="outline">
+          <mat-label>Email:</mat-label>
+          <input matInput formControlName="email">
+        </mat-form-field>
+        @if(email.errors?.['required'] && email.touched){
+        <p style="color: red; font-size: small;">Campo requerido</p>
+        }
+        @if(email.errors?.['email'] && email.touched){
+        <p style="color: red; font-size: small;">Debe ser un email</p>
+        }
+      </div>
+
+      <div style="margin-bottom: 2%; display: flex; flex-direction: column;" formArrayName="telefonos">
+        
+        @for(item of telefonos.controls; track $index ){
+        <div style="margin-bottom: 5%;" [formGroupName]="$index">
+          <select formControlName="type" class="form-item" style="margin-bottom: 5%;">
+            @for(typePhones of typePhones; track $index){
+            <option value="{{typePhones}}">{{typePhones}}</option>
+            }
+          </select>
+          <mat-form-field appearance="outline">
+            <mat-label>Teléfono</mat-label>
+            <input matInput type="tel" formControlName="numero">
+          </mat-form-field>
+
+        </div>
+        }
+        <p (click)="masTelefonos()">Añadir + telefonos</p>
+      </div>
+
+      <div style="margin-bottom: 2%;">
+        <mat-form-field appearance="outline">
+          <mat-label>Dirección:</mat-label>
+          <input matInput formControlName="direccion">
+        </mat-form-field>
+        @if(direccion.errors?.['required'] && direccion.touched){
+        <p style="color: red; font-size: small;">Campo requerido</p>
+        }
+      </div>
+
+      <button type="submit" [disabled]="FormularioShared.invalid">Enviar</button>
+
+    </form>
+
+
+  </div>
+
+  <div style="flex-basis: 50%; margin-left: 10%;">
+
+    <pre>{{FormularioShared.value| json}}</pre>
+    <p>{{FormularioShared.invalid}}</p>
+    <p>{{FormularioShared.valid}}</p>
+    <p>{{FormularioShared.get('email')?.errors?.['email'] | json}}</p>
+
+  </div>
+</div>
+

@@ -1,0 +1,30 @@
+<table mat-table [dataSource]="dataSource"
+style="margin-top: 10%; background-color: rgb(212, 194, 235); border: 1px solid black; border-radius: 0.9rem;">
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef style="font-family: 'Courier New', Courier, monospace;font-weight: 900; font-size: large;"> Nº </th>
+    <td mat-cell *matCellDef="let element" style="font-family: 'Courier New', Courier, monospace;font-size: medium;"> {{id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef style="font-family: 'Courier New', Courier, monospace;font-weight: 900; font-size: large;"> Name </th>
+    <td mat-cell *matCellDef="let element" style="font-family: 'Courier New', Courier, monospace;font-size: medium;"> {{name}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef style="font-family: 'Courier New', Courier, monospace;font-weight: 900; font-size: large;"> Date </th>
+    <td mat-cell *matCellDef="let element" style="font-family: 'Courier New', Courier, monospace;font-size: medium;"> {{date}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="episode">
+    <th mat-header-cell *matHeaderCellDef style="font-family: 'Courier New', Courier, monospace;font-weight: 900; font-size: large;"> Episode </th>
+    <td mat-cell *matCellDef="let element" style="font-family: 'Courier New', Courier, monospace;font-size: medium;"> {{episode}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

@@ -1,0 +1,12 @@
+<div class="div-todo-la-pagina">
+
+  <div class="div-titulo">
+    <h1 class="texto">Todos los personajes de la especie => {{nameEspecies}}</h1>
+  </div>
+
+  <div class="div-todas-las-cartas">
+    @for(item of especiesByName; track $index ){
+      <app-MatCardComponent [widthVariable]="widthVariable" [heightVariable]="heightVariable" [class]="'cardpequeña'" [name]="item.name" [specie]="item.species" [gender]="item.gender" [image]="item.image" [id]="item.id"></app-MatCardComponent>
+  }
+  </div>
+</div>
